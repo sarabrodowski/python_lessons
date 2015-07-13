@@ -29,10 +29,54 @@
 #		If you have enough bread (2 slices), peanut butter (1), and jelly (1), print a message like "I can make a peanut butter and jelly sandwich"; 
 #		If you don't; print a message like "Looks like I don't have a lunch today"
 
+bread = 2
+pb = 1
+jelly = 1
+
+if (pb >= 1) and (jelly >= 1) and (bread >= 2):
+	print 'It\'s peanut butter jelly time'
+else:
+	print 'No lunch for you'
+#Compound conditional example. 
+
+if pb >=1: 
+	if jelly >=1:
+		if bread >=2:
+			print 'It\'s peanut butter jelly time'
+		else:
+			print 'I have enough PB and J, but not enough bread.'
+	else: 
+		print ' I have enough PB, but not enough jelly'
+else:
+	print 'I don\'t have enough PB'
+#Another way to do it as opposed to the first example at the top.
+
 # To satisfy the second goal:
 #		Continue from the first goal, and add:
 #		If you have enough bread (at least 2 slices), peanut butter (at least 1), and jelly (at least 1), print a message like "I can make this many sandwiches: " and then calculate the result.
 #		If you don't; you can print the same message as before
+
+bread = 9
+pb = 5
+jelly = 7
+
+full_sandwiches = bread / 2
+
+if (full_sandwiches < pb) and (full_sandwiches < jelly):
+	least_ingr = "pb"
+	least_num = full_sandwiches
+elif (pb < full_sandwiches) and (pb < jelly):
+	least_ingr = "pb"
+	least_num = pb
+else:
+	least_ingr = "jelly"
+	least_num = jelly
+
+if (full_sandwiches >=1) and (pb >=1) and (jelly >=1):
+	print 'There\'s enough bread, peanut butter, and jelly to make a sandwich'
+	print 'You can make {0} sandwich(es)' .format(least_num)
+else:
+	print 'There\'s not enough bread and/or PB and/or jam to make a sandwich.'
 
 # To satisfy the third goal:
 #		Continue from the second goal, and add:
